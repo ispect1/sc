@@ -1,0 +1,5 @@
+level01@SnowCrash:find / -user flag01
+flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash, пароль 42hDRfypTqqnw не подходит
+level01@SnowCrash:/tmp$ wget https://www.openwall.com/john/k/john-1.9.0.tar.xz
+level01@SnowCrash:/tmp$ tar -xpJf john-1.9.0.tar.xz
+level01@SnowCrash:/tmp/john-1.9.0$ cat doc/INSTALL

