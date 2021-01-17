@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import sys
 import json
-import re
 
 
 if __name__ == '__main__':
@@ -33,5 +32,5 @@ if __name__ == '__main__':
                 break
 
         print(f'Password: {byte.decode()}')
-    except Exception:
+    except:
         print('Invalid parse file')

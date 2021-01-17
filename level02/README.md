@@ -1,5 +1,8 @@
-`scp -P 4242 level02@localhost:/home/user/level02/level02.pcap .
-`chmod 700 level02.pcap`
+`scp -P 4242 level02@localhost:/home/user/level02/level02.pcap .`
+
+`chmod +r level02.pcap`
+
+`python script.py level02.json`
 
 1) Скачиваем файл по scp
 2) Даем ему права на чтение
