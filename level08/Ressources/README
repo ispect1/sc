@@ -13,7 +13,9 @@ exit(1 <unfinished ...>
 'token' в название файла,
 следовательно нужен файл который не содержит в названии 'token'.
 Переименовать и скопировать файл не позволяют права доступа, сделаем файл-ссылку:
+level08@SnowCrash:~$ cd /tmp
 level08@SnowCrash:/tmp$ ln -s /home/user/level08/token test
+level08@SnowCrash:/tmp$ cd
 level08@SnowCrash:~$ ./level08 /tmp/test
 quif5eloekouj29ke0vouxean
 level08@SnowCrash:~$ su flag08

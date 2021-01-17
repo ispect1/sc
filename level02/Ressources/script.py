@@ -4,7 +4,7 @@ import json
 
 
 if __name__ == '__main__':
-    if sys.argv == 1:
+    if len(sys.argv) == 1:
         print('Введите файл, который нужно распарсить')
         sys.exit()
 
@@ -31,6 +31,6 @@ if __name__ == '__main__':
             except IndexError:
                 break
 
-        print(f'Password: {byte.decode()}')
+        print(f'{byte.decode()}')
     except:
         print('Invalid parse file')
