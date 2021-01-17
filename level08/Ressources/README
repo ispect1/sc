@@ -12,13 +12,8 @@ exit(1 <unfinished ...>
 Файл token как аргумент не подходит, функция strstr() проверяет вхождение
 'token' в название файла,
 следовательно нужен файл который не содержит в названии 'token'.
-Переименовать и скопировать файл не позволяют права доступа.
-Приходим к выводу, что нам необходим файл-посредник, который бы
-использовал содержимое файла token,
-т.e. ссылался на него. Для этого создаем файл-ссылку:
+Переименовать и скопировать файл не позволяют права доступа, сделаем файл-ссылку:
 level08@SnowCrash:/tmp$ ln -s /home/user/level08/token test
-level08@SnowCrash:~$ ./level08 /tmp/test1
+level08@SnowCrash:~$ ./level08 /tmp/test
 quif5eloekouj29ke0vouxean
 level08@SnowCrash:~$ su flag08
-flag08@SnowCrash:~$ getflag
-Check flag.Here is your token : 25749xKZ8L7DkSCwJkT9dyv6f
